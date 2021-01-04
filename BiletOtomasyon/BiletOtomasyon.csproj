@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D2BB61B-1088-4BDE-8277-DB263CCD3784}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BiletOtomasyon</RootNamespace>
+    <AssemblyName>BiletOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\BiletContext.cs" />
+    <Compile Include="Entities\filminOturumlari.cs" />
+    <Compile Include="Entities\filmler.cs" />
+    <Compile Include="Entities\filmTarzi.cs" />
+    <Compile Include="Entities\filmTurleri.cs" />
+    <Compile Include="Entities\Koltuk.cs" />
+    <Compile Include="Entities\odemeSekli.cs" />
+    <Compile Include="Entities\oturumlar.cs" />
+    <Compile Include="Entities\roleOfUsers.cs" />
+    <Compile Include="Entities\roles.cs" />
+    <Compile Include="Entities\Salon.cs" />
+    <Compile Include="Entities\salonunKoltuklari.cs" />
+    <Compile Include="Entities\Satis.cs" />
+    <Compile Include="Entities\sysdiagrams.cs" />
+    <Compile Include="Entities\users.cs" />
+    <Compile Include="frmAdminList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminList.Designer.cs">
+      <DependentUpon>frmAdminList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaSayfa.Designer.cs">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBilet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilet.Designer.cs">
+      <DependentUpon>frmBilet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilmEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilmEkle.Designer.cs">
+      <DependentUpon>frmFilmEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilmList.Designer.cs">
+      <DependentUpon>frmFilmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiveUpRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiveUpRole.Designer.cs">
+      <DependentUpon>frmGiveUpRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKoltukSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKoltukSecim.Designer.cs">
+      <DependentUpon>frmKoltukSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMakeModerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMakeModerator.Designer.cs">
+      <DependentUpon>frmMakeModerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalonEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalonEkle.Designer.cs">
+      <DependentUpon>frmSalonEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSatisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatisYap.Designer.cs">
+      <DependentUpon>frmSatisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTotalSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTotalSales.Designer.cs">
+      <DependentUpon>frmTotalSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\userModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminList.resx">
+      <DependentUpon>frmAdminList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnaSayfa.resx">
+      <DependentUpon>frmAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilet.resx">
+      <DependentUpon>frmBilet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilmEkle.resx">
+      <DependentUpon>frmFilmEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilmList.resx">
+      <DependentUpon>frmFilmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiveUpRole.resx">
+      <DependentUpon>frmGiveUpRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKoltukSecim.resx">
+      <DependentUpon>frmKoltukSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMakeModerator.resx">
+      <DependentUpon>frmMakeModerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalonEkle.resx">
+      <DependentUpon>frmSalonEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatisYap.resx">
+      <DependentUpon>frmSatisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTotalSales.resx">
+      <DependentUpon>frmTotalSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
